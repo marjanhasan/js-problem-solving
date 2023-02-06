@@ -12,11 +12,11 @@ it'll return a string so that the user can understand what should enter as an in
     iv) subtract 5 from the (iii) value then, return it.
 */
 
-function mindGame(num){
-    if(typeof(num) != 'number' || num < 0){
+function mindGame(number){
+    if(typeof(number) != 'number' || number < 0){
         return 'Please enter a positive number: ';
     }
-    return (((num * 3) + 10) / 2) - 5;  
+    return (((number * 3) + 10) / 2) - 5;  
 }
 
 //Problem 2: Finding even or odd
