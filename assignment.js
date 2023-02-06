@@ -1,32 +1,26 @@
 //Problem 1: Let’s play a mind game
 
-function mindGame(positiveNumber){
-    if(typeof positiveNumber != 'number' && positiveNumber < 0){
+function mindGame(num){
+    if(typeof(num) != 'number' || num < 0){
         return 'Please enter a positive number: ';
     }
-    positiveNumber *= 3;
-    positiveNumber += 10;
-    positiveNumber /= 2;
-    positiveNumber -= 5;
-    return positiveNumber;
+    return (((num * 3) + 10) / 2) - 5;  
 }
 
 //Problem 2: Finding even or odd
-
 function evenOdd(stringParameter){
     if(typeof stringParameter != 'string'){
         return 'Please input a string value: ';
     }
 
     if(stringParameter.length % 2 == 0){
-        return 'Even';
+        return 'even';
     }else{
         return 'odd';
     }
 }
 
 // Problem 3: Is Less or Greater than seven
-
 function isLGSeven(number){
     if(typeof number != 'number'){
         return 'Please input a number: ';
@@ -38,12 +32,13 @@ function isLGSeven(number){
     }
     return number * 2;
 }
-// Problem 4: Finding Bad data
 
+// Problem 4: Finding Bad data
 function findingBadData(collectionOfData){
     if(typeof collectionOfData != 'object'){
         return 'Please input an array of data which has positive and negative value: ';
     }
+    
     let badData = 0;
     for(let i = 0; i < collectionOfData.length; i++){
         if(collectionOfData[i] < 0){
@@ -55,9 +50,8 @@ function findingBadData(collectionOfData){
 
 
 // Problem 5: Convert your gems into diamond
-
 function gemsToDiamond(gemsOfFirstFriend, gemsOfSecondFriend, gemsOfThirdFriend){
-    if(typeof gemsOfFirstFriend != 'number' && typeof gemsOfSecondFriend != 'number' && typeof gemsOfThirdFriend != 'number'){
+    if(typeof(gemsOfFirstFriend) != "number" || typeof(gemsOfSecondFriend) != "number" || typeof(gemsOfThirdFriend) != "number"){
         return 'Please input the value of gems of three individual frineds properly: ';
     }
 
